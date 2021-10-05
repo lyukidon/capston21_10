@@ -16,5 +16,7 @@ document.querySelector('button').addEventListener('click',function(){
     document.querySelector('th#bh').innerHTML = 0.4 * lr
     document.querySelector('th#bl').innerHTML = 0.4 * lr
     document.querySelector('th#s').innerHTML = `${1.0*lr} / ${9.8*lr}`
-
+    document.querySelector('th#wD').innerHTML = 0.98 * lr
+    document.querySelector('th#amp').innerHTML = 0.208 * lr
+    document.querySelector('th#tS').innerHTML = 5.69 * (lr**(1/2))
 })
