@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <input 
+        id="proto"
+        type="number"
+        placeholder="모델"
+    >
+    <input
+        id="model"
+        type="number"
+        placeholder="실제"
+    >
+    <button id='submit'> 계산 하기 </button>
+    <table>
+
+        <tr>
+            <th>structure</th>
+            <th>Dimention</th>
+        </tr>
+        <tr>
+            <th>submerge</th>
+            <th>chrest</th>
+            <th>Hseaward</th>
+            <th>Hlandward</th>
+            <th>Freeboard</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th id="crest"></th>
+            <th id="Hsea"></th>
+            <th id="Hland"></th>
+            <th id="Freeboard"></th>
+        </tr>
+        <tr>
+            <th>SeaWall</th>
+            <th>width</th>
+            <th>Height</th>
+            <th>Length</th>
+            <th>Distance to 1st row</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th id="Sw"></th>
+            <th id="Sh"></th>
+            <th id="Sl"></th>
+            <th id="Sd"></th>
+        </tr>
+        <tr>
+            <th>Building</th>
+            <th>width</th>
+            <th>Height</th>
+            <th>length</th>
+            <th>Spacing each other</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th id='Bw'></th>
+            <th id="bh"></th>
+            <th id="bl"></th>
+            <th id="s"></th>
+        </tr>
+    </table>
+    <script src="./script.js"></script>
+</body>
+</html>
