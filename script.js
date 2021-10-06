@@ -19,4 +19,6 @@ document.querySelector('button').addEventListener('click',function(){
     document.querySelector('th#wD').innerHTML = 0.98 * lr
     document.querySelector('th#amp').innerHTML = 0.208 * lr
     document.querySelector('th#tS').innerHTML = 5.69 * (lr**(1/2))
+    document.querySelector('th#exp').innerHTML = 41.7 * lr
+    document.querySelector('th#slpLength').innerHTML = `밑변:${20*lr} 높이:${1*lr} 빗변:${Math.sqrt(401)*lr}`
 })
