@@ -20,6 +20,7 @@ document.querySelector('button').addEventListener('click',function(){
     document.querySelector('th#amp').innerHTML = Math.round(0.208 * lr * 10000) / 10000
     document.querySelector('th#tS').innerHTML = Math.round(5.69 * (lr**(1/2)) * 10000) / 10000
     document.querySelector('th#exp').innerHTML = Math.round(41.7 * lr * 10000) / 10000
-    document.querySelector('th#slpLength').innerHTML = `밑변:${Math.round(10000 * 20*lr)/10000} 높이:${Math.round(10000 * 1*lr)/10000} 빗변:${Math.round(10000 * Math.sqrt(401)*lr)/10000}`
-    console.log(1*lr)
+    document.querySelector('th#slpLength').innerHTML = `밑변:${Math.round(10000 * 20*lr)/10000} 높이:${Math.round(10000 * 1*lr)/10000} 빗변:${Math.round(10000 * Math.sqrt(401)*lr)/10000}`;
+    document.querySelector('th#buildlength').innerHTML = 0.4 * lr + 0.8*lr * 4;
+    // console.log(0.8*lr)
 })
