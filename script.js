@@ -38,7 +38,7 @@ document.querySelector('button').addEventListener('click',function(){
     document.querySelector('th.slpLength').innerHTML = `밑변:${Math.round(10000 * 20*lr)/10000} 높이:${Math.round(10000 * 1*lr)/10000} 빗변:${Math.round(10000 * Math.sqrt(401)*lr)/10000}`;
     document.querySelector('th#buildlength').innerHTML = Math.round( 10000*(0.4 * lr + 0.8*lr*4) )/10000;
     document.querySelector('th#buildwidth').innerHTML = Math.round( 10000*(0.4 * lr + 1.0*lr * 3) )/10000;
-    document.querySelectorAll('th.emptySpace').innerHTML = Math.round( 10000*(1.6*lr) )/10000;
+    document.querySelector('th#emptySpace').innerHTML = Math.round( 10000*(1.6*lr) )/10000;
     document.querySelector('th#structurelength').innerHTML = Math.round( 10000*( 0.4 * lr + 0.8*lr * 4 + 20*lr + 1.6*lr) )/10000;
     document.querySelector('th#slp').innerHTML = Math.round( 10000*(20*lr) )/10000;
     document.querySelector('th#emptyspacelength').innerHTML = Math.round( 10000*(1.6*lr) )/10000;
@@ -46,8 +46,8 @@ document.querySelector('button').addEventListener('click',function(){
     document.querySelector('th#all').innerHTML = Math.round( 10000*(2 + Math.sqrt(401)*lr + 1.6*lr + 0.4 * lr + 0.8*lr*4 )) /10000;
 
     //canvas
-    const canvas = document.querySelector('canvas')
-    const ctx=canvas.getContext('2d');
+    const canvas1 = document.querySelector('canvas#canvas1')
+    const ctx=canvas1.getContext('2d');
 
     const wd = 1200
     const hi = 60
@@ -86,6 +86,34 @@ document.querySelector('button').addEventListener('click',function(){
     // ctx.moveTo(0, hi - 0.98 * lr * 200)
     // ctx.lineTo(wd, hi - 0.98 * lr * 200)
     // ctx.stroke()
-    // 건물
-})
+    
+    // 방파제
+    ctx.beginPath()
+    ctx.moveTo(wd/3 + 20*lr*200, hi-lr *200)
+    ctx.lineTo(wd/3 + 20*lr*200, hi-lr *200 - 0.12 * lr * 200)
+    ctx.lineTo(wd/3+20*lr*200+0.036*lr*200, hi-lr *200 - 0.12 * lr * 200)
+    ctx.lineTo(wd/3+20*lr*200+0.036*lr*200, hi-lr *200)
+    ctx.stroke()
 
+    //건물
+    for (let i=0 ; i < 4; i++){
+        ctx.beginPath()
+        ctx.moveTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, hi-lr*200)
+        ctx.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, hi - lr*200 - 0.4 * lr*200)
+        ctx.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, hi - lr*200 - 0.4 * lr*200)
+        ctx.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, hi - lr*200)
+        ctx.stroke()
+    }
+    
+    for (let i=0 ; i < 4; i++){
+        ctx.beginPath()
+        ctx.moveTo(0+i*10,0)
+        ctx.lineTo(0+i*10,10)
+        ctx.lineTo(10+i*10,10)
+        ctx.lineTo(10+i*10,0)
+        ctx.stroke()
+    }
+ 
+
+})
+document.querySelector('button').click()
