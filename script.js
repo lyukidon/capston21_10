@@ -1,4 +1,19 @@
+const data = {
+    crest: 0.676,
+    Hsea: 0.278,
+    Hland: 0.258,
+    Freeboard: 0.024,
+    Sw: 0.036,
+    Sh: 0.12,
+    Sl: 10,
+    Sd: 1.6,
+    Bw: 0.4,
+    bh: 0.4,
+    bl: 0.4,
+    s: 1.0,
+    wD: 0.98,
 
+}
 
 document.querySelector('button').addEventListener('click',function(){
     const proto = document.querySelector('input#proto').value;
