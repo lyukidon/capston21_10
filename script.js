@@ -50,7 +50,7 @@ document.querySelector('button').addEventListener('click',function(){
     const ctx=canvas1.getContext('2d');
 
     const wd = 1200
-    const hi = 60
+    const hi = 50
     ctx.clearRect(0,0,wd,hi)
     // 실험실
     ctx.beginPath()
@@ -96,7 +96,7 @@ document.querySelector('button').addEventListener('click',function(){
     ctx.stroke()
 
     //건물
-    for (let i=0 ; i < 4; i++){
+    for (let i=0 ; i < 5; i++){
         ctx.beginPath()
         ctx.moveTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, hi-lr*200)
         ctx.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, hi - lr*200 - 0.4 * lr*200)
@@ -107,8 +107,11 @@ document.querySelector('button').addEventListener('click',function(){
 
     const canvas2 = document.querySelector('canvas#canvas2')
     const ct2=canvas2.getContext('2d');
-
+ 
     ct2.clearRect(0,0,wd,hi)
+
+    ct2.fillText('25cm', 0, hi/2)
+    // ct2.rotate(90*Math.PI/180)
 
     ct2.beginPath()
     ct2.moveTo(0,0)
@@ -130,6 +133,61 @@ document.querySelector('button').addEventListener('click',function(){
     ct2.stroke()
     ct2.font = '15px Arial'
     ct2.fillText('SLOPE',wd/3 + 20*lr*200/2,hi/2)
+
+    //건물
+    for (let i=0 ; i < 5; i++){
+        for (let j=0; j<4;j++){
+            ct2.beginPath()
+            ct2.moveTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0 + 1*lr*200 *j)
+            ct2.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0.4 * lr*200+ 1*lr*200*j)
+            ct2.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, 0.4 * lr*200+ 1*lr*200 *j)
+            ct2.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, 0+ 1*lr*200 *j)
+            ct2.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0+ 1*lr*200 *j)
+            ct2.stroke()
+        }
+    }
+
+    const canvas3 = document.querySelector('canvas#canvas3')
+    const ct3=canvas3.getContext('2d');
+
+    ct3.clearRect(0,0,wd,hi)
+
+    ct3.fillText('25cm', 0, hi/2)
+    // ct2.rotate(90*Math.PI/180)
+
+    ct3.beginPath()
+    ct3.moveTo(0,0)
+    ct3.lineTo(0,hi);
+    ct3.lineTo(wd,hi);
+    ct3.lineTo(wd,0)
+    ct3.lineTo(0,0)
+    ct3.stroke()
+
+    //아크릴
+    ct3.beginPath()
+    ct3.moveTo(wd/3, hi)
+    ct3.lineTo(wd/3,0)
+    ct3.stroke()
+
+    ct3.beginPath();
+    ct3.moveTo(wd/3 + 20*lr*200,0);
+    ct3.lineTo(wd/3 + 20*lr*200, hi)
+    ct3.stroke()
+    ct3.font = '15px Arial'
+    ct3.fillText('SLOPE',wd/3 + 20*lr*200/2,hi/2)
+
+    //건물
+    for (let i=0 ; i < 5; i++){
+        for (let j=0; j<2;j++){
+            ct3.beginPath()
+            ct3.moveTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0 + 1*lr*200 *j)
+            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0.4 * lr*200+ 1*lr*200*j)
+            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, 0.4 * lr*200+ 1*lr*200 *j)
+            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, 0+ 1*lr*200 *j)
+            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0+ 1*lr*200 *j)
+            ct3.stroke()
+        }
+    }
 
 })
 document.querySelector('button').click()
