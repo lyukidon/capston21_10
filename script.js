@@ -104,16 +104,32 @@ document.querySelector('button').addEventListener('click',function(){
         ctx.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, hi - lr*200)
         ctx.stroke()
     }
-    
-    for (let i=0 ; i < 4; i++){
-        ctx.beginPath()
-        ctx.moveTo(0+i*10,0)
-        ctx.lineTo(0+i*10,10)
-        ctx.lineTo(10+i*10,10)
-        ctx.lineTo(10+i*10,0)
-        ctx.stroke()
-    }
- 
+
+    const canvas2 = document.querySelector('canvas#canvas2')
+    const ct2=canvas2.getContext('2d');
+
+    ct2.clearRect(0,0,wd,hi)
+
+    ct2.beginPath()
+    ct2.moveTo(0,0)
+    ct2.lineTo(0,hi);
+    ct2.lineTo(wd,hi);
+    ct2.lineTo(wd,0)
+    ct2.lineTo(0,0)
+    ct2.stroke()
+
+    //아크릴
+    ct2.beginPath()
+    ct2.moveTo(wd/3, hi)
+    ct2.lineTo(wd/3,0)
+    ct2.stroke()
+
+    ct2.beginPath();
+    ct2.moveTo(wd/3 + 20*lr*200,0);
+    ct2.lineTo(wd/3 + 20*lr*200, hi)
+    ct2.stroke()
+    ct2.font = '15px Arial'
+    ct2.fillText('SLOPE',wd/3 + 20*lr*200/2,hi/2)
 
 })
 document.querySelector('button').click()
