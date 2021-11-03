@@ -45,4 +45,47 @@ document.querySelector('button').addEventListener('click',function(){
     document.querySelector('th#ground').innerHTML = Math.round( 10000*(0.4 * lr + 0.8*lr*4) )/10000;
     document.querySelector('th#all').innerHTML = Math.round( 10000*(2 + Math.sqrt(401)*lr + 1.6*lr + 0.4 * lr + 0.8*lr*4 )) /10000;
 
+    //canvas
+    const canvas = document.querySelector('canvas')
+    const ctx=canvas.getContext('2d');
+
+    const wd = 1200
+    const hi = 60
+    ctx.clearRect(0,0,wd,hi)
+    // 실험실
+    ctx.beginPath()
+    ctx.moveTo(0,0)
+    ctx.lineTo(0,hi);
+    ctx.lineTo(wd,hi);
+    ctx.lineTo(wd,0)
+    ctx.stroke()
+
+    // 해저면
+    ctx.font = '50px'
+    ctx.fillText('2m', wd/6,hi)
+
+    // 아크릴
+    ctx.beginPath()
+    ctx.moveTo(wd/3, hi)
+    ctx.lineTo(wd/3 + 20*lr*200, hi-lr *200)
+    ctx.lineTo(wd, hi-1*lr*200)
+    ctx.stroke()
+
+    ctx.fillText(20*lr, wd/3 + 20*lr*200/2, hi)
+
+    ctx.beginPath();
+    ctx.strokeStyle='red';
+    ctx.moveTo(wd/3 + 20*lr*200,0);
+    ctx.lineTo(wd/3 + 20*lr*200, hi)
+    ctx.stroke()
+    ctx.strokeStyle='black'
+    
+    ctx.fillText(4 - 20*lr,wd/3 + 20*lr*200,hi)
+    //물높이
+    // ctx.beginPath()
+    // ctx.moveTo(0, hi - 0.98 * lr * 200)
+    // ctx.lineTo(wd, hi - 0.98 * lr * 200)
+    // ctx.stroke()
+    // 건물
 })
+
