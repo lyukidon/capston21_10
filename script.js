@@ -92,7 +92,7 @@ document.querySelector('button').addEventListener('click',function(){
     ctx.beginPath()
     ctx.strokeStyle='blue';
     ctx.moveTo(0, hi - 0.98 * lr * 200)
-    ctx.lineTo(wd/3 + 20*lr*200, hi - 0.98 * lr * 200)
+    ctx.lineTo(wd/3 + 20*lr*200 - 8git, hi - 0.98 * lr * 200)
     ctx.stroke()
     ctx.strokeStyle='black';
     
