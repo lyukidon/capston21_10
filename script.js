@@ -66,6 +66,13 @@ document.querySelector('button').addEventListener('click',function(){
 
     // 아크릴
     ctx.beginPath()
+    ctx.strokeStyle='red';
+    ctx.moveTo(wd/3, hi)
+    ctx.lineTo(wd/3,0)
+    ctx.stroke()
+    ctx.strokeStyle='black'
+
+    ctx.beginPath()
     ctx.moveTo(wd/3, hi)
     ctx.lineTo(wd/3 + 20*lr*200, hi-lr *200)
     ctx.lineTo(wd, hi-1*lr*200)
@@ -81,11 +88,13 @@ document.querySelector('button').addEventListener('click',function(){
     ctx.strokeStyle='black'
     
     ctx.fillText(4 - 20*lr,wd/3 + 20*lr*200,hi)
-    //물높이
-    // ctx.beginPath()
-    // ctx.moveTo(0, hi - 0.98 * lr * 200)
-    // ctx.lineTo(wd, hi - 0.98 * lr * 200)
-    // ctx.stroke()
+    // 물높이
+    ctx.beginPath()
+    ctx.strokeStyle='blue';
+    ctx.moveTo(0, hi - 0.98 * lr * 200)
+    ctx.lineTo(wd/3 + 20*lr*200, hi - 0.98 * lr * 200)
+    ctx.stroke()
+    ctx.strokeStyle='black';
     
     // 방파제
     ctx.beginPath()
