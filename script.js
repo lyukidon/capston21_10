@@ -140,7 +140,7 @@ document.querySelector('button').addEventListener('click',function(){
     ct2.moveTo(wd/3 + 20*lr*200,0);
     ct2.lineTo(wd/3 + 20*lr*200, hi)
     ct2.stroke()
-    ct2.font = '15px Arial'
+    ct2.font = '12px Arial'
     ct2.fillText('SLOPE',wd/3 + 20*lr*200/2,hi/2)
 
     //건물
@@ -182,7 +182,7 @@ document.querySelector('button').addEventListener('click',function(){
     ct3.moveTo(wd/3 + 20*lr*200,0);
     ct3.lineTo(wd/3 + 20*lr*200, hi)
     ct3.stroke()
-    ct3.font = '15px Arial'
+    ct3.font = '13px Arial'
     ct3.fillText('SLOPE',wd/3 + 20*lr*200/2,hi/2)
 
     //건물
