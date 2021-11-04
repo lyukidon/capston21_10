@@ -201,6 +201,8 @@ document.querySelector('button').addEventListener('click',function(){
     const canvas4 = document.querySelector('canvas#submerge');
     const ct4 = canvas4.getContext('2d');
 
+    ct4.clearRect(0,0,350,300)
+
     ct4.beginPath()
     ct4.moveTo(100,0)
     ct4.lineTo(200,0)
