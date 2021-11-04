@@ -1,7 +1,10 @@
 .inlineBlock{
     display: inline-block;
 }
-
+body{
+    width: 1300px;
+    margin: 0 auto;
+}
 table, tr, th{
     border: 1px solid black;
     border-collapse: collapse;
