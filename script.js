@@ -22,7 +22,7 @@ document.querySelector('button').addEventListener('click',function(){
     document.querySelector('th#crest').innerHTML = Math.round(0.676 * lr * 10000) / 10000 ;
     document.querySelector('th#Hsea').innerHTML = Math.round(0.278 * lr * 10000) / 10000 ;
     document.querySelector('th#Hland').innerHTML = Math.round(0.258 * lr * 10000) / 10000 ;
-    document.querySelector('th#Freeboard').innerHTML = `${Math.round(10000 * 0.024 * lr)/10000} / ${Math.round(10000 * 0.154 *lr)/10000} `
+    document.querySelector('th#Freeboard').innerHTML = `${Math.round(10000 * 0.024 * lr)/10000} / ${Math.round(10000 * 0.154 *lr)/10000}`
     document.querySelector('th#Sw').innerHTML = Math.round(0.036 * lr * 10000) / 10000 ;
     document.querySelector('th#Sh').innerHTML = Math.round(0.12 * lr * 10000) / 10000 ;
     document.querySelector('th#Sl').innerHTML = Math.round(10 * lr * 10000) / 10000 ;
@@ -117,7 +117,7 @@ document.querySelector('button').addEventListener('click',function(){
     const canvas2 = document.querySelector('canvas#canvas2')
     const ct2=canvas2.getContext('2d');
  
-    ct2.clearRect(0,0,wd,hi)
+    ct2.clearRect(0,0,wd,hi+50)
 
     ct2.fillText('25cm', 0, hi/2)
     // ct2.rotate(90*Math.PI/180)
@@ -132,7 +132,7 @@ document.querySelector('button').addEventListener('click',function(){
 
     //아크릴
     ct2.beginPath()
-    ct2.moveTo(wd/3, hi)
+    ct2.moveTo(wd/3, hi+50)
     ct2.lineTo(wd/3,0)
     ct2.stroke()
 
@@ -159,7 +159,7 @@ document.querySelector('button').addEventListener('click',function(){
     const canvas3 = document.querySelector('canvas#canvas3')
     const ct3=canvas3.getContext('2d');
 
-    ct3.clearRect(0,0,wd,hi)
+    ct3.clearRect(0,0,wd,hi+50)
 
     ct3.fillText('25cm', 0, hi/2)
     // ct2.rotate(90*Math.PI/180)
@@ -189,14 +189,22 @@ document.querySelector('button').addEventListener('click',function(){
     for (let i=0 ; i < 5; i++){
         for (let j=0; j<2;j++){
             ct3.beginPath()
-            ct3.moveTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0 + 1*lr*200 *j)
-            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0.4 * lr*200+ 1*lr*200*j)
-            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, 0.4 * lr*200+ 1*lr*200 *j)
-            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, 0+ 1*lr*200 *j)
-            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0+ 1*lr*200 *j)
+            ct3.moveTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0 + 1*lr*200 *j + 0.6*lr*200 )
+            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0.4 * lr*200+ 1*lr*200*j+ 0.6*lr*200)
+            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, 0.4 * lr*200+ 1*lr*200 *j+ 0.6*lr*200)
+            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, 0+ 1*lr*200 *j+ 0.6*lr*200)
+            ct3.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200 + 0.4*lr*200*2*i, 0+ 1*lr*200 *j+ 0.6*lr*200)
             ct3.stroke()
         }
     }
+
+    let up = `${0.6*lr} m`
+    let down = `${(50 - 0.4 * lr*200- lr*200 - 0.6*lr*200)/200} m`
+    console.log(50 - 0.4 * lr*200- lr*200 - 0.6*lr*200)
+    ct3.textBaseline='top'
+    ct3.fillText(up, wd/3 + 20*lr*200 + 1.6*lr*200, 0)
+    ct3.textBaseline='top'
+    ct3.fillText(down, wd/3 + 20*lr*200 + 1.6*lr*200, lr*200 + 0.4*lr*200+ 0.6*lr*200)
 
     const canvas4 = document.querySelector('canvas#submerge');
     const ct4 = canvas4.getContext('2d');
@@ -218,6 +226,5 @@ document.querySelector('button').addEventListener('click',function(){
     ct4.fillText(0.258 * lr * 100, 200, 100) //Hland
     ct4.fillText(0.676*lr*100,100,2)
     // ct4.fillText()
-
 })
 document.querySelector('button').click()
