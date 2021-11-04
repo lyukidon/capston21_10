@@ -204,7 +204,7 @@ document.querySelector('button').addEventListener('click',function(){
     ct4.beginPath()
     ct4.moveTo(100,0)
     ct4.lineTo(200,0)
-    ct4.lineTo(300,200)
+    ct4.lineTo(295,170)
     ct4.lineTo(0,200)
     ct4.lineTo(100,0)
     ct4.stroke()
