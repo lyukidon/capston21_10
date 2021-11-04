@@ -21,112 +21,116 @@
         placeholder="실제"
     >
     <button id='submit'> 계산 하기 </button>
-    <table>
+    <div id="tableDiv">
+        <table>
 
-        <tr>
-            <th>structure</th>
-            <th>Dimention</th>
-        </tr>
-        <tr>
-            <th>submerge</th>
-            <th>chrest</th>
-            <th>Hseaward</th>
-            <th>Hlandward</th>
-            <th>Freeboard</th>
-        </tr>
-        <tr>
-            <th></th>
-            <th id="crest"></th>
-            <th id="Hsea"></th>
-            <th id="Hland"></th>
-            <th id="Freeboard"></th>
-        </tr>
-        <tr>
-            <th>SeaWall</th>
-            <th>width</th>
-            <th>Height</th>
-            <th>Length</th>
-            <th>Distance to 1st row</th>
-        </tr>
-        <tr>
-            <th></th>
-            <th id="Sw"></th>
-            <th id="Sh"></th>
-            <th id="Sl"></th>
-            <th id="Sd"></th>
-        </tr>
-        <tr>
-            <th>Building</th>
-            <th>width</th>
-            <th>Height</th>
-            <th>length</th>
-            <th>Spacing each other</th>
-        </tr>
-        <tr>
-            <th></th>
-            <th id='Bw'></th>
-            <th id="bh"></th>
-            <th id="bl"></th>
-            <th id="s"></th>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <th>waterDepth(m)</th>
-            <th id="wD"></th>
-        </tr>
-        <tr>
-            <th>amplitude(m)</th>
-            <th id='amp'></th>
-        </tr>
-        <tr>
-            <th>timeScale(m)</th>
-            <th id="tS"></th>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <th>실험실 크기</th>
-            <th>경사도 길이</th>
-        </tr>
-        <tr>
-            <th id="exp"></th>
-            <th class="slpLength"></th>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <th>건물 전체 길이(빈 공간 포함)</th>
-            <th>건물 너비</th>
-            <th>SeaWall Empty Space</th>
-            <th>건물 최소 길이 + 경사도 밑변</th>
-        </tr>
-        <tr>
-            <th id="buildlength"></th>
-            <th id="buildwidth"></th>
-            <th id="emptySpace"></th>
-            <th id="structurelength"></th>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <th>바닥</th>
-            <th>경사</th>
-            <th>지표 빈공간</th>
-            <th>건물 길이</th>
-            <th>전체</th>
-        </tr>
-        <tr>
-            <th id="seafloor">2</th>
-            <th id="slp"></th>
-            <th id="emptyspacelength"></th>
-            <th id="ground"></th>
-            <th id="all"></th>
-        </tr>
-    </table>
+            <tr>
+                <th>structure</th>
+                <th>Dimention</th>
+            </tr>
+            <tr>
+                <th>submerge</th>
+                <th>chrest</th>
+                <th>Hseaward</th>
+                <th>Hlandward</th>
+                <th>Freeboard</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th id="crest"></th>
+                <th id="Hsea"></th>
+                <th id="Hland"></th>
+                <th id="Freeboard"></th>
+            </tr>
+            <tr>
+                <th>SeaWall</th>
+                <th>width</th>
+                <th>Height</th>
+                <th>Length</th>
+                <th>Distance to 1st row</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th id="Sw"></th>
+                <th id="Sh"></th>
+                <th id="Sl"></th>
+                <th id="Sd"></th>
+            </tr>
+            <tr>
+                <th>Building</th>
+                <th>width</th>
+                <th>Height</th>
+                <th>length</th>
+                <th>Spacing each other</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th id='Bw'></th>
+                <th id="bh"></th>
+                <th id="bl"></th>
+                <th id="s"></th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>waterDepth(m)</th>
+                <th id="wD"></th>
+            </tr>
+            <tr>
+                <th>amplitude(m)</th>
+                <th id='amp'></th>
+            </tr>
+            <tr>
+                <th>timeScale(m)</th>
+                <th id="tS"></th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>실험실 크기</th>
+                <th>경사도 길이</th>
+            </tr>
+            <tr>
+                <th id="exp"></th>
+                <th class="slpLength"></th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>건물 전체 길이(빈 공간 포함)</th>
+                <th>건물 너비</th>
+                <th>SeaWall Empty Space</th>
+                <th>건물 최소 길이 + 경사도 밑변</th>
+            </tr>
+            <tr>
+                <th id="buildlength"></th>
+                <th id="buildwidth"></th>
+                <th id="emptySpace"></th>
+                <th id="structurelength"></th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>바닥</th>
+                <th>경사</th>
+                <th>지표 빈공간</th>
+                <th>건물 길이</th>
+                <th>전체</th>
+            </tr>
+            <tr>
+                <th id="seafloor">2</th>
+                <th id="slp"></th>
+                <th id="emptyspacelength"></th>
+                <th id="ground"></th>
+                <th id="all"></th>
+            </tr>
+        </table>    
+    </div>
+
     <canvas id='canvas1' width="1200" height="50"></canvas>
     <canvas id="canvas2" width="1200" height="50"></canvas>
     <canvas id="canvas3" width="1200" height="50"></canvas>
+    <canvas id="submerge" width="350" height="300"></canvas>
     <script src="./script.js"></script>
 </body>
 </html>

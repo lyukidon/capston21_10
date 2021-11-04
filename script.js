@@ -198,5 +198,24 @@ document.querySelector('button').addEventListener('click',function(){
         }
     }
 
+    const canvas4 = document.querySelector('canvas#submerge');
+    const ct4 = canvas4.getContext('2d');
+
+    ct4.beginPath()
+    ct4.moveTo(100,0)
+    ct4.lineTo(200,0)
+    ct4.lineTo(300,200)
+    ct4.lineTo(0,200)
+    ct4.lineTo(100,0)
+    ct4.stroke()
+
+    ct4.textBaseline = 'top'
+    // ct4.fillText(0.676 * lr) //crest
+    ct4.fillText('CM',2,2)
+    ct4.fillText(0.278 * lr*100, 20, 100) //Hsea
+    ct4.fillText(0.258 * lr * 100, 200, 100) //Hland
+    ct4.fillText(0.676*lr*100,100,2)
+    // ct4.fillText()
+
 })
 document.querySelector('button').click()
