@@ -44,7 +44,9 @@ document.querySelector('button').addEventListener('click',function(){
     document.querySelector('th#emptyspacelength').innerHTML = Math.round( 10000*(1.6*lr) )/10000;
     document.querySelector('th#ground').innerHTML = Math.round( 10000*(0.4 * lr + 0.8*lr*4) )/10000;
     document.querySelector('th#all').innerHTML = Math.round( 10000*(2 + Math.sqrt(401)*lr + 1.6*lr + 0.4 * lr + 0.8*lr*4 )) /10000;
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                     1번   
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //canvas
     const canvas1 = document.querySelector('canvas#canvas1')
     const ctx=canvas1.getContext('2d');
@@ -95,8 +97,16 @@ document.querySelector('button').addEventListener('click',function(){
     ctx.lineTo(wd/3 + 20*lr*200 - 8, hi - 0.98 * lr * 200)
     ctx.stroke()
     ctx.strokeStyle='black';
+
+    // 수중방파제
+    ctx.beginPath()
+    ctx.moveTo(wd/3+13.56*lr*200,hi-0.678*lr*200)
+    ctx.lineTo(wd/3+13.838*lr*200,hi-0.956*lr*200)
+    ctx.lineTo(wd/3+14.514*lr*200,hi-0.956*lr*200)
+    ctx.lineTo(wd/3+14.772*lr*200,hi-0.7386*lr*200)
+    ctx.stroke()
     
-    // 방파제
+    // 호안
     ctx.beginPath()
     ctx.moveTo(wd/3 + 20*lr*200, hi-lr *200)
     ctx.lineTo(wd/3 + 20*lr*200, hi-lr *200 - 0.12 * lr * 200)
@@ -113,7 +123,9 @@ document.querySelector('button').addEventListener('click',function(){
         ctx.lineTo(wd/3 + 20*lr*200 + 1.6*lr*200+0.4 * lr*200 + 0.4*lr*200*2*i, hi - lr*200)
         ctx.stroke()
     }
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                     2번   
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     const canvas2 = document.querySelector('canvas#canvas2')
     const ct2=canvas2.getContext('2d');
  
@@ -143,6 +155,18 @@ document.querySelector('button').addEventListener('click',function(){
     ct2.font = '12px Arial'
     ct2.fillText('SLOPE',wd/3 + 20*lr*200/2,hi/2)
 
+    //수중방파제
+    ct2.beginPath()
+    ct2.moveTo(wd/3+13.56*lr*200,0)
+    ct2.lineTo(wd/3+13.56*lr*200,hi)
+    ct2.stroke()
+    ct2.beginPath()
+    ct2.moveTo(wd/3+14.772*lr*200,0)
+    ct2.lineTo(wd/3+14.772*lr*200,hi)
+    ct2.stroke()
+    ct2.fillStyle = 'rgba(0, 0, 255, 0.5)'
+    ct2.fillRect(wd/3+13.56*lr*200,0,1.212*lr*200,hi)
+
     //건물
     for (let i=0 ; i < 5; i++){
         for (let j=0; j<4;j++){
@@ -155,14 +179,15 @@ document.querySelector('button').addEventListener('click',function(){
             ct2.stroke()
         }
     }
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                     3번   
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     const canvas3 = document.querySelector('canvas#canvas3')
     const ct3=canvas3.getContext('2d');
 
     ct3.clearRect(0,0,wd,hi+50)
 
     ct3.fillText('25cm', 0, hi/2)
-    // ct2.rotate(90*Math.PI/180)
 
     ct3.beginPath()
     ct3.moveTo(0,0)
@@ -185,6 +210,19 @@ document.querySelector('button').addEventListener('click',function(){
     ct3.font = '13px Arial'
     ct3.fillText('SLOPE',wd/3 + 20*lr*200/2,hi/2)
 
+    //수중방파제
+    ct3.beginPath()
+    ct3.moveTo(wd/3+13.56*lr*200,0)
+    ct3.lineTo(wd/3+13.56*lr*200,hi)
+    ct3.stroke()
+    ct3.beginPath()
+    ct3.moveTo(wd/3+14.772*lr*200,0)
+    ct3.lineTo(wd/3+14.772*lr*200,hi)
+    ct3.stroke()
+    ct3.fillStyle = 'rgba(0, 0, 255, 0.5)'
+    ct3.fillRect(wd/3+13.56*lr*200,0,1.212*lr*200,hi)
+    ct3.fillStyle = 'black'
+
     //건물
     for (let i=0 ; i < 5; i++){
         for (let j=0; j<2;j++){
@@ -205,7 +243,9 @@ document.querySelector('button').addEventListener('click',function(){
     ct3.fillText(up, wd/3 + 20*lr*200 + 1.6*lr*200, 0)
     ct3.textBaseline='top'
     ct3.fillText(down, wd/3 + 20*lr*200 + 1.6*lr*200, lr*200 + 0.4*lr*200+ 0.6*lr*200)
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                     4번   
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     const canvas4 = document.querySelector('canvas#submerge');
     const ct4 = canvas4.getContext('2d');
 
@@ -220,11 +260,9 @@ document.querySelector('button').addEventListener('click',function(){
     ct4.stroke()
 
     ct4.textBaseline = 'top'
-    // ct4.fillText(0.676 * lr) //crest
     ct4.fillText('CM',2,2)
     ct4.fillText(0.278 * lr*100, 20, 100) //Hsea
     ct4.fillText(0.258 * lr * 100, 200, 100) //Hland
     ct4.fillText(0.676*lr*100,100,2)
-    // ct4.fillText()
 })
 document.querySelector('button').click()
