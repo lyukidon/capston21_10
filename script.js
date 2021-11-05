@@ -164,8 +164,11 @@ document.querySelector('button').addEventListener('click',function(){
     ct2.moveTo(wd/3+14.772*lr*200,0)
     ct2.lineTo(wd/3+14.772*lr*200,hi)
     ct2.stroke()
-    ct2.fillStyle = 'rgba(0, 0, 255, 0.5)'
+    ct2.fillStyle = 'rgba(0, 0, 255, 0.2)'
     ct2.fillRect(wd/3+13.56*lr*200,0,1.212*lr*200,hi)
+    ct2.fillStyle =  'rgba(0, 0, 255, 0.4)'
+    ct2.fillRect(wd/3+13.838*lr*200,0,0.676*lr*200,hi)
+    ct2.fillStyle =  'rgba(255, 255, 255, 1)'
 
     //건물
     for (let i=0 ; i < 5; i++){
@@ -219,9 +222,11 @@ document.querySelector('button').addEventListener('click',function(){
     ct3.moveTo(wd/3+14.772*lr*200,0)
     ct3.lineTo(wd/3+14.772*lr*200,hi)
     ct3.stroke()
-    ct3.fillStyle = 'rgba(0, 0, 255, 0.5)'
+    ct3.fillStyle = 'rgba(0, 0, 255, 0.2)'
     ct3.fillRect(wd/3+13.56*lr*200,0,1.212*lr*200,hi)
-    ct3.fillStyle = 'black'
+    ct3.fillStyle =  'rgba(0, 0, 255, 0.4)'
+    ct3.fillRect(wd/3+13.838*lr*200,0,0.676*lr*200,hi)
+    ct3.fillStyle = 'rgba(255, 255, 255, 1)'
 
     //건물
     for (let i=0 ; i < 5; i++){
